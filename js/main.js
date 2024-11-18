@@ -94,7 +94,7 @@ function showNotification(message) {
         color: white;
         padding: 10px 20px;
         border-radius: 5px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
         z-index: 1000;
     `;
     // setTimeout pour faire disparaitre la notification
