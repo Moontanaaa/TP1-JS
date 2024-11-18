@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="./js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Todo List : TP1</h1>
+    </header>
+    <main>
+        <!-- Liste des taches -->
+        <section id="task-list">
+            <h2>Liste des tâches</h2>
+            <ul id="tasks"></ul>
+        </section>
+
+        <!-- formulaire avec H2 et Btn delete-task -->
+        <section id="add-task">
+            <h2>Ajouter une tâche</h2>
+            <form id="task-form">
+                <input type="text" id="task-title" placeholder="Nom de la tâche" required>
+                <select id="task-priority">
+                    <option value="1">Priorité élevée</option>
+                    <option value="2">Priorité normale</option>
+                    <option value="3">Priorité basse</option>
+                </select>
+                <button type="submit">Ajouter</button>
+            </form>
+            <button id="delete-tasks">Supprimer toutes les tâches cochées</button>
+        </section>
+    </main>
+</body>
+</html>
+
+
+
