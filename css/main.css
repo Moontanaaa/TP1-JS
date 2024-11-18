@@ -16,7 +16,7 @@ header {
 main {
     margin: 20px;
     padding: 20px;
-    background-color: rgba(173, 216, 230, 0.479);
+    background-color: #add8e67a;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -37,6 +37,7 @@ h1, h2 {
 .priority-3 label {
     color: blue;
 }
+/* Btn */
 button {
     padding: 8px;
     border: none;

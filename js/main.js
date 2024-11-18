@@ -5,7 +5,7 @@ const tasks = JSON.parse(localStorage.getItem('tasks')) || [
     { title: "Répondre à mes emails", priority: 3 },
 ];
 
-// Toutes les constantes
+// Toutes les const de base
 const taskList = document.getElementById('tasks');
 const taskForm = document.getElementById('task-form');
 const taskTitle = document.getElementById('task-title');
@@ -18,7 +18,7 @@ function displayTasks() {
     tasks
         .sort((a, b) => a.priority - b.priority) // Tri des tâches par priorité rouge > vert > bleu
         .forEach((task, index) => {
-            const li = document.createElement('li'); // créer un élément li
+            const li = document.createElement('li'); // créer un élément li avec le innerHTML demandé
             li.classList.add(`priority-${task.priority}`);
             li.innerHTML = `
                 <label>
@@ -68,7 +68,7 @@ deleteTasksBtn.addEventListener('click', () => {
     }
 });
 
-// Sauvegarde du localStorage
+// Sauvegarde du localStorage pour garder les données
 function saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
@@ -97,11 +97,12 @@ function showNotification(message) {
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         z-index: 1000;
     `;
+    // setTimeout pour faire disparaitre la notification
     document.body.appendChild(notification);
     setTimeout(() => notification.remove(), 3000);
 }
 
-// Initialisation avec l'évenement load
+// Init avec l'évenement load
 window.addEventListener('load', () => {
     loadTasks();
     displayTasks();
